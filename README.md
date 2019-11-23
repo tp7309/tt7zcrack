@@ -1,4 +1,5 @@
 # tt7zcrack
+developing, not work!!!
 
 Fast 7zip crack assistant tool which support GPU/CPU.
 
