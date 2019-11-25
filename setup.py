@@ -28,26 +28,27 @@ install_requires = []
 
 setup(
     name='tt7zcrack',
-    version='1.0.0',
+    version='0.0.4',
     description=description,
     author='tp7309',
     author_email='yiyou7309@gmail.com',
     url='https://github.com/tp7309/tt7zcrack',
     license='Apache License Version 2.0',
-    keywords=
-    '7z 7zip password crack hashcat jtr john gpu',
+    keywords='7z 7zip password crack hashcat jtr john gpu',
     long_description=long_description,
+    long_description_content_type="text/markdown",
     packages=find_packages(exclude=['docs', 'tests*']),
     include_package_data=True,
     install_requires=install_requires,
     entry_points={
         'console_scripts': [
-            'tt7zcrack = src.tt7zcrack.main',
+            'tt7zcrack = src.tt7zcrack:main',
         ],
     },
-    classifiers=(
+    classifiers=[
         "Programming Language :: Python :: 3",
-    ),
+    ],
+    python_requires='>=3.5',
 )
 
 # md2rst
@@ -55,10 +56,13 @@ setup(
 
 # upload
 # python setup.py bdist_wheel
+# python -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
+# python -m pip install --index-url https://test.pypi.org/simple/ --no-deps tt7zcrack -U
 # twine upload dist/*
 
 # pyinstaller
 # pyinstaller --onefile src/tt7zcrack.py
+
 
 # auto generate requirements.txt
 # pip freeze --local > requirements.txt

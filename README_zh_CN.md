@@ -1,13 +1,13 @@
 # tt7zcrack
-developing, not work!!!
-
+[![Build Status](https://travis-ci.org/tp7309/tt7zcrack.svg?branch=master)](https://travis-ci.org/tp7309/tt7zcrack)
+[![Coverage Status](https://coveralls.io/repos/github/tp7309/tt7zcrack/badge.svg?branch=master)](https://coveralls.io/github/tp7309/tt7zcrack?branch=master)
 首先 tt7zcrack 是一个支持 GPU/CPU 加速的 7z 破解工具，速度比用`7z`解压命令一个个试验要快很多。
 写这个小工具的原因是作者君的一个 7z 压缩包密码忘了，在破解过程中遇到了不少坑，现有的工具有一定的学习成本，所以把这些结果输出供有碰到相同问题的同学使用。
 
 # 使用要求
 
 Python 3.5 或之后版本，没用过 python 的没关系，看下面教程安装一个即可。
-[InstallDoc](https://www.runoob.com/python3/python3-install.html)
+[python安装教程](https://www.runoob.com/python3/python3-install.html)
 
 # 安装
 
@@ -21,7 +21,7 @@ pip install tt7zcrack
 
 ## Mac
 
-确保[brew][https://brew.sh/index_zh-cn]已安装。
+确保[brew](https://brew.sh/index_zh-cn)已安装。
 
 ```bash
 # pwds.txt中存放可能的密码列表，可以使用`ttpassgen`来生成，注意文件最好是使用`utf-8`编码。
@@ -84,4 +84,4 @@ brew install p7zip
 
 # Thanks
 
-(7zhashcat)[https://github.com/philsmd/7z2hashcat]
+[7zhashcat](https://github.com/philsmd/7z2hashcat)

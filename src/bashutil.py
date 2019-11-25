@@ -4,11 +4,10 @@
 import os
 import sys
 import io
-import argparse
 import subprocess
 
-_ROOT_PATH = os.path.abspath(os.path.join(
-    os.path.dirname(os.path.abspath(__file__)), os.path.pardir))
+_ROOT_PATH = os.path.abspath(
+    os.path.join(os.path.dirname(os.path.abspath(__file__)), os.path.pardir))
 
 
 def run(command):
@@ -17,17 +16,27 @@ def run(command):
 
 
 def sh(command, print_msg=True):
-    p = subprocess.Popen(
-        command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    p = subprocess.Popen(command,
+                         shell=True,
+                         stdout=subprocess.PIPE,
+                         stderr=subprocess.STDOUT)
     result = p.stdout.read().decode('utf-8')
     if print_msg:
         print(result)
     return result
 
 
+def isci():
+    return os.environ.get('CI') in ['True', 'true', '1']
+
+
 def perllib(name):
     path = os.path.join(_ROOT_PATH, 'src', name)
-    return "%s.exe" % (path) if os.name == 'nt' else "%s.pl" % (path)
+    if os.name == 'nt':
+        return "%s.exe" % (path)
+    else:
+        perl = 'perl'
+        return "%s %s.pl" % (perl, path)
 
 
 def hasexec(cmd):

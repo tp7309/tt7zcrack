@@ -8,8 +8,10 @@ flake8 = "*"
 autopep8 = "*"
 nose2 = "*"
 pandoc = "*"
+twine = "*"
+yapf = "*"
 
 [packages]
 
 [requires]
-python_version = "3.5"
+python_version = "3.7"

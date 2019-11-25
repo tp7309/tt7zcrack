@@ -2,8 +2,8 @@
 # -*- coding:utf-8 -*-
 
 import os
-import bashutil
-from bashutil import sh, run
+from . import bashutil
+from .bashutil import sh, run
 
 _HOME_DIR = os.path.expanduser('~')
 
@@ -39,7 +39,6 @@ class Attacker:
 
 class Hashcat(Attacker):
     """Hashcat"""
-
     def __init__(self, hashformat, wordlist, infile, hashpath, args={}):
         super().__init__(hashformat, wordlist, infile, hashpath, args)
 
@@ -74,7 +73,6 @@ class Hashcat(Attacker):
 
 class JTR(Attacker):
     """JohnTheRipper"""
-
     def __init__(self, hashformat, wordlist, infile, hashpath, args={}):
         super().__init__(hashformat, wordlist, infile, hashpath, args)
 

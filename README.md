@@ -1,12 +1,14 @@
 # tt7zcrack
-developing, not work!!!
+[![Build Status](https://travis-ci.org/tp7309/tt7zcrack.svg?branch=master)](https://travis-ci.org/tp7309/tt7zcrack)
+[![Coverage Status](https://coveralls.io/repos/github/tp7309/tt7zcrack/badge.svg?branch=master)](https://coveralls.io/github/tp7309/tt7zcrack?branch=master)
+README i18n: [中文说明](https://github.com/tp7309/tt7zcrack/blob/master/README_zh_CN.md)
 
 Fast 7zip crack assistant tool which support GPU/CPU.
 
 # Requirements
 
 Python 3.5 or later.
-[InstallDoc](https://www.runoob.com/python3/python3-install.html)
+[python install](https://www.runoob.com/python3/python3-install.html)
 
 # Install
 
@@ -20,7 +22,7 @@ pip install tt7zcrack
 
 ## Mac
 
-make sure [brew][https://brew.sh/index_zh-cn] is installed.
+make sure [brew](https://brew.sh/index_zh-cn) is installed.
 
 ```bash
 # use passwords from pwds.txt to crack file
@@ -82,4 +84,4 @@ brew install p7zip
 
 # Thanks
 
-(7zhashcat)[https://github.com/philsmd/7z2hashcat]
+[7zhashcat](https://github.com/philsmd/7z2hashcat)
