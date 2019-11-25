@@ -2,8 +2,6 @@
 # -*- coding:utf-8 -*-
 
 import os
-import sys
-import io
 import subprocess
 
 _ROOT_PATH = os.path.abspath(

@@ -6,7 +6,7 @@ libs/**/tests/
 .DS_Store
 /.history/
 /Pipfile.lock/
-src/ttcrack_hash.txt
+ttcrack_hash.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

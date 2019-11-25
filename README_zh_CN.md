@@ -1,4 +1,5 @@
 # tt7zcrack
+
 [![Build Status](https://travis-ci.org/tp7309/tt7zcrack.svg?branch=master)](https://travis-ci.org/tp7309/tt7zcrack)
 [![Coverage Status](https://coveralls.io/repos/github/tp7309/tt7zcrack/badge.svg?branch=master)](https://coveralls.io/github/tp7309/tt7zcrack?branch=master)
 首先 tt7zcrack 是一个支持 GPU/CPU 加速的 7z 破解工具，速度比用`7z`解压命令一个个试验要快很多。
@@ -7,7 +8,7 @@
 # 使用要求
 
 Python 3.5 或之后版本，没用过 python 的没关系，看下面教程安装一个即可。
-[python安装教程](https://www.runoob.com/python3/python3-install.html)
+[python 安装教程](https://www.runoob.com/python3/python3-install.html)
 
 # 安装
 

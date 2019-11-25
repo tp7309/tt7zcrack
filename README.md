@@ -1,6 +1,8 @@
 # tt7zcrack
+
 [![Build Status](https://travis-ci.org/tp7309/tt7zcrack.svg?branch=master)](https://travis-ci.org/tp7309/tt7zcrack)
 [![Coverage Status](https://coveralls.io/repos/github/tp7309/tt7zcrack/badge.svg?branch=master)](https://coveralls.io/github/tp7309/tt7zcrack?branch=master)
+
 README i18n: [中文说明](https://github.com/tp7309/tt7zcrack/blob/master/README_zh_CN.md)
 
 Fast 7zip crack assistant tool which support GPU/CPU.
