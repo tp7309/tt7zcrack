@@ -40,8 +40,10 @@ class Test_tt7zcrack(unittest.TestCase):
     def tearDownClass(cls):
         super(Test_tt7zcrack, cls).tearDownClass()
 
-    def go(self, wordlist = wordlist_file, engine = 'hashcat', clean = False):
+    def go(self, wordlist = wordlist_file, engine = 'hashcat', china = False, clean = False):
         args = ['--wordlist', wordlist, '--engine', engine]
+        if china:
+            args.append('--china')
         if clean:
             args.append('--clean')
         args.append(p7zfile)
@@ -72,6 +74,11 @@ class Test_tt7zcrack(unittest.TestCase):
                                         'hashcat.potfile')))
         self.assertFalse(
             os.path.exists(os.path.join(homedir, '.john', 'john.pot')))
+
+    def test_china_mirror(self):
+        self.go(wordlist_file, 'hashcat', china=True)
+        # CI env has different base_profile path, so only make sure brew is still work.
+        self.assertIsNotNone("brew --repo")
 
 
 if __name__ == '__main__':

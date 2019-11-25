@@ -43,7 +43,9 @@ def hasexec(cmd):
 
 
 def ischina():
-    result = os.system('ping www.google.com -t 3 -l 1')
+    if isci():
+        return False
+    result = os.system('ping www.google.com -t 3 -c 1')
     return (result is True)
 
 

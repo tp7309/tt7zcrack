@@ -48,11 +48,11 @@ def isinstalled():
     return bashutil.hasexec('hashcat') and bashutil.hasexec('john')
 
 
-def install_osx():
+def install_osx(force_china):
     if not bashutil.hasexec('brew'):
         print('please install brew!')
         return
-    if bashutil.ischina():
+    if force_china or bashutil.ischina():
         set_china_mirror()
     run('brew install p7zip')
     run('brew install hashcat')
@@ -65,14 +65,6 @@ def install_osx():
         print('\n\ninstall failed!')
     else:
         print('\n\ninstall done, please rerun command')
-
-
-def runcrack_by_hashcat(args):
-    # generate hash
-    run("%s %s > %s" % (bashutil.perllib('7z2hashcat'), args.file, HASH_PATH))
-    run("hashcat -a 0 -m 11600 %s %s" % (HASH_PATH, args.wordlist))
-    print('crack result'.center(100, '-'))
-    run("hashcat --show %s" % (HASH_PATH))
 
 
 def parse_args(args):
@@ -89,6 +81,10 @@ def parse_args(args):
                         type=Engine,
                         choices=list(Engine),
                         help='password recovery engine')
+    parser.add_argument('--china',
+                        action='store_true',
+                        default=False,
+                        help='force use china mirror for brew、pip')
     parser.add_argument('--clean',
                         action='store_true',
                         default=False,
@@ -110,7 +106,7 @@ def domain(args):
 
     if not isinstalled():
         if sys.platform == 'darwin':
-            install_osx()
+            install_osx(args.china)
         elif sys.platform == 'linux' or sys.platform == 'linux2':
             print('this operating system is not supported!')
         else:
