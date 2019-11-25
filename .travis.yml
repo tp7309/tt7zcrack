@@ -26,6 +26,6 @@ install:
 # 'python3' is a 'command not found' error on Windows but 'py' works on Windows only
 # command to run tests
 # command to run tests
-script: nose2 --with-coverage --cover-package=src
+script: nose2 --with-coverage --coverage=src
 after_success:
   coveralls
