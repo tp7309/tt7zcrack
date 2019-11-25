@@ -32,7 +32,7 @@ tt7zcrack --wordlist pwds.txt crack.7z
 ```
 
 when crack is completed, password will be shown like this:
-![image](https://github.com/tp7309/TinkerQuickIntegration/blob/master/images/testDir.png)
+![image](https://github.com/tp7309/TinkerQuickIntegration/blob/master/asserts/result.png)
 
 ## Linux/Windows
 
