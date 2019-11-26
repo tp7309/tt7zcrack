@@ -32,7 +32,7 @@ tt7zcrack --wordlist pwds.txt crack.7z
 ```
 
 when crack is completed, password will be shown like this:
-![image](https://github.com/tp7309/TinkerQuickIntegration/blob/master/asserts/result.png)
+![image](https://github.com/tp7309/tt7zcrack/blob/master/asserts/result.png)
 
 ## Linux/Windows
 
@@ -61,7 +61,7 @@ optional arguments:
 
 if the hash file cannot generated correctly, you can use `jtr` engine to try again.
 
-The cracked password will be saved locally by the password cracking tool for next query. Use the following command to delete it. Note that this will delete all the cracked results!
+The cracked password will be saved locally by the password cracking tool for next query. Use the following command to delete it. Note that this will delete all cracked results!
 
 ```bash
 tt7zcrack --clean

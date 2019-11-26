@@ -31,7 +31,7 @@ tt7zcrack --wordlist pwds.txt crack.7z
 ```
 
 当破解程序运行完成后，会下类似下图的显示，图中**456**就是密码了:
-![image](https://github.com/tp7309/TinkerQuickIntegration/blob/master/asserts/result.png)
+![image](https://github.com/tp7309/tt7zcrack/blob/master/asserts/result.png)
 
 ## Linux/Windows
 
@@ -60,7 +60,7 @@ optional arguments:
 
 如果默认的出错(如不能生成 hash)时可以换`jtr`试试。
 
-已破解的密码会被密码破解工具保存在本地供查询，使用下面命令可以删除，注意这会删除所有的已破解结果！
+已破解的密码会被密码破解工具保存在本地供查询，使用下面命令可以删除，注意这会删除所有已破解结果！
 
 ```bash
 tt7zcrack --clean

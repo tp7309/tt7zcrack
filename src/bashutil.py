@@ -18,7 +18,11 @@ def sh(command, print_msg=True):
                          shell=True,
                          stdout=subprocess.PIPE,
                          stderr=subprocess.STDOUT)
-    result = p.stdout.read().decode('utf-8')
+    result = p.stdout.read()
+    try:
+        result = result.decode('utf-8')
+    except UnicodeDecodeError:
+        result = result.decode('gbk')
     if print_msg:
         print(result)
     return result
@@ -39,7 +43,7 @@ def perllib(name):
 
 def hasexec(cmd):
     result = sh("%s --version" % (cmd), print_msg=False)
-    return ('not found' not in result)
+    return not ('not found' in result or u'不是' in result)
 
 
 def ischina():

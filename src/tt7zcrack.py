@@ -57,7 +57,6 @@ def install_osx(force_china):
     run('brew install p7zip')
     run('brew install hashcat')
     run('brew install john-jumbo')
-    run('brew install tree')
     # 7z2john.pl dependencies
     print("we need sudo to install perl script dependencies...")
     run("curl -L https://cpanmin.us | perl - --sudo App::cpanminus && sudo cpanm Compress::Raw::Lzma")
@@ -107,12 +106,9 @@ def domain(args):
     if not isinstalled():
         if sys.platform == 'darwin':
             install_osx(args.china)
-        elif sys.platform == 'linux' or sys.platform == 'linux2':
-            print('this operating system is not supported!')
         else:
-            print('this operating system is not supported!')
-        return
-
+            print('currently only support "MacOS"!')
+            return
     if args.engine == Engine.hashcat:
         # use hashcat
         attacker = attackers.Hashcat('7z', args.wordlist, args.file, HASH_PATH)
