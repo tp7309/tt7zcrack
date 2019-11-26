@@ -108,7 +108,7 @@ def domain(args):
             install_osx(args.china)
         else:
             print('currently only support "MacOS"!')
-            return
+        return
     if args.engine == Engine.hashcat:
         # use hashcat
         attacker = attackers.Hashcat('7z', args.wordlist, args.file, HASH_PATH)

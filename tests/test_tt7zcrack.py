@@ -77,7 +77,7 @@ class Test_tt7zcrack(unittest.TestCase):
 
     def test_china_mirror(self):
         self.go(wordlist_file, 'hashcat', china=True)
-        # CI env has different base_profile path, so only make sure brew is still work.
+        # CI env may have different base_profile path, so only make sure brew is still work.
         self.assertIsNotNone("brew --repo")
 
 
