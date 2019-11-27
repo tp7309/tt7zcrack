@@ -51,8 +51,8 @@ setup(
     python_requires='>=3.5',
 )
 
-# md2rst
-# pandoc --from=markdown --to=rst --output=README.rst README.md
+# test
+# nose2
 
 # upload
 # python setup.py bdist_wheel
