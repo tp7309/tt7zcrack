@@ -50,7 +50,7 @@ def ischina():
     if isci():
         return False
     result = os.system('ping www.google.com -t 3 -c 1')
-    return (result is True)
+    return result > 0
 
 
 def rm(path):
