@@ -36,7 +36,7 @@ when crack is completed, password will be shown like this:
 
 ## Linux/Windows
 
-Currently not supported, coming soon..
+Currently not supported.
 
 # Usage
 

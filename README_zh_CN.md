@@ -23,19 +23,19 @@ pip install tt7zcrack
 ## Mac
 
 确保[brew](https://brew.sh/index_zh-cn)已安装。
+**pwds.txt** 中存放可能的密码，一行一个密码。可以使用[ttpassgen](https://github.com/tp7309/TTPassGen)来批量生成，注意文件最好是使用`utf-8`编码。
+*crack.7z* 是要破解的7z文件。
 
 ```bash
-# pwds.txt中存放可能的密码列表，可以使用`ttpassgen`来生成，注意文件最好是使用`utf-8`编码。
-# crack.7z换成你要破解的7z文件。
 tt7zcrack --wordlist pwds.txt crack.7z
 ```
 
-当破解程序运行完成后，会下类似下图的显示，图中**456**就是密码了:
+当破解程序运行完成后，会出现类似下图的显示，图中**456**就是密码了:
 ![image](https://github.com/tp7309/tt7zcrack/blob/master/asserts/result.png)
 
 ## Linux/Windows
 
-当前未支持，添加中。
+暂不支持。
 
 # 详情使用
 
@@ -66,7 +66,7 @@ optional arguments:
 tt7zcrack --clean
 ```
 
-# 7z 命令(供参考)
+# 7z 压缩相关命令(供参考)
 
 ```bash
 # Mac上安装7z，Windows直接下载然后配置环境变量
