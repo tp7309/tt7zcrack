@@ -4,6 +4,9 @@
 Fast 7zip crack assistant tool which support GPU/CPU.
 @poject: tt7zcrack
 @auther: tp7309
+
+debug:
+python -m src.tt7zcrack --help
 '''
 
 import os
@@ -63,7 +66,7 @@ def install_osx(force_china):
     if not isinstalled():
         print('\n\ninstall failed!')
     else:
-        print('\n\ninstall done, please rerun command')
+        print('\n\ninstall done, please run command again.')
 
 
 def parse_args(args):
