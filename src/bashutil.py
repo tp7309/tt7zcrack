@@ -10,7 +10,7 @@ _ROOT_PATH = os.path.abspath(
 
 def run(command):
     print(command + '...')
-    subprocess.run(command, shell=True)
+    subprocess.call(command, shell=True)
 
 
 def sh(command, print_msg=True):

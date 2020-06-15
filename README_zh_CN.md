@@ -23,7 +23,7 @@ pip install tt7zcrack
 ## Mac
 
 确保[brew](https://brew.sh/index_zh-cn)已安装。
-**pwds.txt** 中存放可能的密码，一行一个密码。可以使用[ttpassgen](https://github.com/tp7309/TTPassGen)来批量生成，注意文件最好是使用`utf-8`编码。
+**pwds.txt** 中存放可能的密码，一行一个密码。可以使用[ttpassgen](https://github.com/tp7309/TTPassGen)来批量生成。
 *crack.7z* 是要破解的7z文件。
 
 ```bash
@@ -58,7 +58,7 @@ optional arguments:
   --clean               清除本地保存的已破解密码文件 (默认: False)
 ```
 
-如果默认的出错(如不能生成 hash)时可以换`jtr`试试。
+**如果默认的出错(如不能生成 hash)时可以换`jtr`试试。**
 
 已破解的密码会被密码破解工具保存在本地供查询，使用下面命令可以删除，注意这会删除所有已破解结果！
 

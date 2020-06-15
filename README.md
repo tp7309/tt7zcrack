@@ -24,14 +24,16 @@ pip install tt7zcrack
 
 ## Mac
 
-make sure [brew](https://brew.sh/index_zh-cn) is installed.
+Make sure [brew](https://brew.sh/index_zh-cn) is installed.
+
+Create **pwds.txt** to store possible passwords, one password occupies one line. you can also use [ttpassgen](https://github.com/tp7309/TTPassGen) to generate a large amount of passwords.
 
 ```bash
 # use passwords from pwds.txt to crack file
 tt7zcrack --wordlist pwds.txt crack.7z
 ```
 
-when crack is completed, password will be shown like this:
+When the crack is complete, password will be shown like this:
 ![image](https://github.com/tp7309/tt7zcrack/blob/master/asserts/result.png)
 
 ## Linux/Windows
@@ -59,7 +61,7 @@ optional arguments:
   --clean               clean related secure files (default: False)
 ```
 
-if the hash file cannot generated correctly, you can use `jtr` engine to try again.
+**if the hash file cannot generated correctly, you can use `jtr` engine to try again.**
 
 The cracked password will be saved locally by the password cracking tool for next query. Use the following command to delete it. Note that this will delete all cracked results!
 
