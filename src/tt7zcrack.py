@@ -61,7 +61,7 @@ def install_osx(force_china):
     run('brew install hashcat')
     run('brew install john-jumbo')
     # 7z2john.pl dependencies
-    print("we need sudo to install perl script dependencies...")
+    print("------we need sudo to install perl script dependencies------")
     run("curl -L https://cpanmin.us | perl - --sudo App::cpanminus && sudo cpanm Compress::Raw::Lzma")
     if not isinstalled():
         print('\n\ninstall failed!')
@@ -107,6 +107,7 @@ def domain(args):
         return
 
     if not isinstalled():
+        print('install dependencies....')
         if sys.platform == 'darwin':
             install_osx(args.china)
         else:

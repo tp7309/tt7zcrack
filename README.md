@@ -10,7 +10,7 @@ Fast 7zip crack assistant tool which support GPU/CPU.
 # Requirements
 
 Python 3.5 or later.
-[python install](https://www.runoob.com/python3/python3-install.html)
+[python install](https://docs.python-guide.org/starting/install3/osx/)
 
 # Install
 

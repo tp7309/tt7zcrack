@@ -28,7 +28,7 @@ install_requires = []
 
 setup(
     name='tt7zcrack',
-    version='0.0.8',
+    version='0.1.0',
     description=description,
     author='tp7309',
     author_email='yiyou7309@gmail.com',
