@@ -5,7 +5,7 @@ sources/
 libs/**/tests/
 .DS_Store
 /.history/
-/Pipfile.lock/
+Pipfile.lock
 ttcrack_hash.txt
 
 # Byte-compiled / optimized / DLL files
