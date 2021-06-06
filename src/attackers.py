@@ -9,7 +9,9 @@ _HOME_DIR = os.path.expanduser('~')
 
 
 class Attacker:
-    def __init__(self, hashformat, wordlist, infile, hashpath, args={}):
+    def __init__(self, hashformat, wordlist, infile, hashpath, args=None):
+        if args is None:
+            args = {}
         self.hashformat = hashformat
         self.wordlist = wordlist
         self.infile = infile
@@ -39,7 +41,9 @@ class Attacker:
 
 class Hashcat(Attacker):
     """Hashcat"""
-    def __init__(self, hashformat, wordlist, infile, hashpath, args={}):
+    def __init__(self, hashformat, wordlist, infile, hashpath, args=None):
+        if args is None:
+            args = {}
         super().__init__(hashformat, wordlist, infile, hashpath, args)
 
     def tohash(self):
@@ -73,7 +77,9 @@ class Hashcat(Attacker):
 
 class JTR(Attacker):
     """JohnTheRipper"""
-    def __init__(self, hashformat, wordlist, infile, hashpath, args={}):
+    def __init__(self, hashformat, wordlist, infile, hashpath, args=None):
+        if args is None:
+            args = {}
         super().__init__(hashformat, wordlist, infile, hashpath, args)
 
     def tohash(self):
