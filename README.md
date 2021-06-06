@@ -1,7 +1,8 @@
 # tt7zcrack
 
-[![Build Status](https://travis-ci.org/tp7309/tt7zcrack.svg?branch=master)](https://travis-ci.org/tp7309/tt7zcrack)
-[![Coverage Status](https://coveralls.io/repos/github/tp7309/tt7zcrack/badge.svg?branch=master)](https://coveralls.io/github/tp7309/tt7zcrack?branch=master)
+[![Build Status](https://travis-ci.com/tp7309/tt7zcrack.svg?branch=master)](https://travis-ci.com/tp7309/tt7zcrack)
+[![codecov](https://codecov.io/gh/tp7309/tt7zcrack/branch/master/graph/badge.svg?token=lyEWTqfeb9)](https://codecov.io/gh/tp7309/tt7zcrack)
+[![DeepSource](https://deepsource.io/gh/tp7309/tt7zcrack.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/tp7309/tt7zcrack/?ref=repository-badge)
 
 README i18n: [中文说明](https://github.com/tp7309/tt7zcrack/blob/master/README_zh_CN.md)
 
@@ -14,7 +15,7 @@ Python 3.5 or later.
 
 # Install
 
-`TTPassGen` can be easily installed using pip:
+`tt7zcrack` can be easily installed using pip:
 
 ```
 pip install tt7zcrack
@@ -26,7 +27,7 @@ pip install tt7zcrack
 
 Make sure [brew](https://brew.sh/index_zh-cn) is installed.
 
-Create **pwds.txt** to store possible passwords, one password occupies one line. you can also use [ttpassgen](https://github.com/tp7309/TTPassGen) to generate a large amount of passwords.
+Create **pwds.txt** to store possible passwords, one password occupies one line. you can also use [tt7zcrack](https://github.com/tp7309/tt7zcrack) to generate a large amount of passwords.
 
 ```bash
 # use passwords from pwds.txt to crack file
