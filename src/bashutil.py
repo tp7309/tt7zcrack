@@ -36,9 +36,8 @@ def perllib(name):
     path = os.path.join(_ROOT_PATH, 'src', name)
     if os.name == 'nt':
         return "%s.exe" % (path)
-    else:
-        perl = 'perl'
-        return "%s %s.pl" % (perl, path)
+    perl = 'perl'
+    return "%s %s.pl" % (perl, path)
 
 
 def hasexec(cmd):
