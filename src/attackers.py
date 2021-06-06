@@ -39,8 +39,6 @@ class Attacker:
 
 class Hashcat(Attacker):
     """Hashcat"""
-    def __init__(self, hashformat, wordlist, infile, hashpath, args={}):
-        super().__init__(hashformat, wordlist, infile, hashpath, args)
 
     def tohash(self):
         super(Hashcat, self).tohash()
@@ -73,8 +71,6 @@ class Hashcat(Attacker):
 
 class JTR(Attacker):
     """JohnTheRipper"""
-    def __init__(self, hashformat, wordlist, infile, hashpath, args={}):
-        super().__init__(hashformat, wordlist, infile, hashpath, args)
 
     def tohash(self):
         super(JTR, self).tohash()
