@@ -17,7 +17,7 @@ crackme_pwd = '456'
 
 def run(command):
     print(command + '...')
-    subprocess.run(command, shell = True)
+    subprocess.run(command, shell = True, check=True)
 
 
 def sh(command, print_msg = True):
