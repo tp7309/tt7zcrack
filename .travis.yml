@@ -25,6 +25,6 @@ install:
 # 'python' points to Python 2.7 on macOS but points to Python 3.8 on Linux and Windows
 # 'python3' is a 'command not found' error on Windows but 'py' works on Windows only
 # command to run tests
-script: nose2 --with-coverage
+script: pytest --cov=src
 after_success:
   - bash <(curl -s https://codecov.io/bash)
