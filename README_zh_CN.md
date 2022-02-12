@@ -24,7 +24,7 @@ pip install tt7zcrack
 ## Mac
 
 确保[brew](https://brew.sh/index_zh-cn)已安装。
-**pwds.txt** 中存放可能的密码，一行一个密码。可以使用[tt7zcrack](https://github.com/tp7309/tt7zcrack)来批量生成。
+**pwds.txt** 中存放可能的密码，一行一个密码。可以使用[TTPassGen](https://github.com/tp7309/TTPassGen)来批量生成。
 *crack.7z* 是要破解的7z文件。
 
 ```bash
