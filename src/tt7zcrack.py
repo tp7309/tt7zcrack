@@ -62,7 +62,9 @@ def install_osx(force_china):
     run('brew install john-jumbo')
     # 7z2john.pl dependencies
     print("------we need sudo to install perl script dependencies------")
-    run("curl -L https://cpanmin.us | perl - --sudo App::cpanminus && sudo /usr/local/bin/cpanm Compress::Raw::Lzma")
+    run("curl -L https://cpanmin.us | perl - App::cpanminus --sudo && sudo cpanm Compress::Raw::Lzma")
+    run("sudo cpan Compress::Raw::Lzma")
+    run("sudo cpan IO::Compress::Lzma")
     if not isinstalled():
         print('\n\ninstall failed!')
     else:
