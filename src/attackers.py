@@ -56,10 +56,12 @@ class Hashcat(Attacker):
     def crack(self):
         super(Hashcat, self).crack()
         hashcat_dir = os.listdir('/usr/local/Cellar/hashcat')
-        if not hashcat_dir and len(hashcat_dir) > 0:
-            opencl_dir = os.path.join(hashcat_dir[0], 'share/hashcat/OpenCL')
+        if hashcat_dir and len(hashcat_dir) > 0:
+            opencl_dir = os.path.join('/usr/local/Cellar/hashcat', hashcat_dir[0], 'share/hashcat/OpenCL')
             print("change to opencl_dir: %s" % (opencl_dir))
             os.chdir(opencl_dir)
+        else:
+            print("Can not found hashcat dir")
         subprocess.call("hashcat -a 0 -m 11600 %s %s" %
                         (self.hashpath, self.wordlist), shell=True)
 
