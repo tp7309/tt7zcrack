@@ -62,7 +62,7 @@ class Hashcat(Attacker):
             os.chdir(opencl_dir)
         else:
             print("Can not found hashcat dir")
-        subprocess.call("hashcat -a 0 -m 11600 %s %s" %
+        subprocess.call("hashcat -m 11600 -a 0 %s %s" %
                         (self.hashpath, self.wordlist), shell=True)
 
     def show_result(self):

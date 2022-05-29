@@ -21,7 +21,7 @@ _ROOT_PATH = os.path.abspath(
     os.path.join(os.path.dirname(os.path.abspath(__file__)), os.path.pardir))
 SRC_DIR = os.path.join(_ROOT_PATH, 'src')
 _CACHE_DIR = os.path.join(_ROOT_PATH, 'cache')
-HASH_PATH = os.path.join('~/ttcrack_hash.txt')
+HASH_PATH = os.path.join('~/Downloads/ttcrack_hash.txt')
 
 
 class Engine(Enum):
