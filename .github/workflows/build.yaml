@@ -36,6 +36,7 @@ jobs:
           coverage-file: coverage.xml
           dsn: ${{ secrets.DEEPSOURCE_DSN }}
           fail-ci-on-error: false
+
   publish:
     runs-on: macos-latest
     steps:
@@ -44,7 +45,7 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.9
-          - name: Install pypa/build
+      - name: Install pypa/build
         run: >-
           python -m
           pip install
@@ -58,11 +59,11 @@ jobs:
           --wheel
           --outdir dist/
           .
-        - name: Publish to PyPI
-          if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
-          uses: pypa/gh-action-pypi-publish@master
-          with:
-            password: ${{ secrets.PYPI_API_TOKEN }}
+      - name: Publish to PyPI
+        if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags')
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
         
   
 
