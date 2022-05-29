@@ -18,7 +18,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
         run: |
-          curl -L http://cpanmin.us | perl - App::cpanminus --sudo && sudo cpanm Compress::Raw::Lzma
+          curl -L http://cpanmin.us | perl - App::cpanminus --sudo | where cpanm && sudo /usr/local/bin/cpanm Compress::Raw::Lzma
           pip install pytest pytest-cov
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Test
