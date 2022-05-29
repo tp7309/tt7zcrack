@@ -4,6 +4,7 @@
 import os
 from . import bashutil
 from .bashutil import sh, run
+import subprocess
 
 _HOME_DIR = os.path.expanduser('~')
 
@@ -41,6 +42,7 @@ class Attacker:
 
 class Hashcat(Attacker):
     """Hashcat"""
+
     def __init__(self, hashformat, wordlist, infile, hashpath, args=None):
         if args is None:
             args = {}
@@ -53,8 +55,13 @@ class Hashcat(Attacker):
 
     def crack(self):
         super(Hashcat, self).crack()
-        os.system("hashcat -a 0 -m 11600 %s %s" %
-                  (self.hashpath, self.wordlist))
+        hashcat_dir = os.listdir('/usr/local/Cellar/hashcat')
+        if not hashcat_dir and len(hashcat_dir) > 0:
+            opencl_dir = os.path.join(hashcat_dir[0], 'share/hashcat/OpenCL')
+            print("change to opencl_dir: %s" % (opencl_dir))
+            os.chdir(opencl_dir)
+        subprocess.call("hashcat -a 0 -m 11600 %s %s" %
+                        (self.hashpath, self.wordlist), shell=True)
 
     def show_result(self):
         super(Hashcat, self).show_result()
@@ -77,6 +84,7 @@ class Hashcat(Attacker):
 
 class JTR(Attacker):
     """JohnTheRipper"""
+
     def __init__(self, hashformat, wordlist, infile, hashpath, args=None):
         if args is None:
             args = {}
@@ -90,8 +98,8 @@ class JTR(Attacker):
     def crack(self):
         super(JTR, self).crack()
         # for print status when Press Ctrl-C
-        os.system("john --wordlist=%s --encoding=UTF-8 %s" %
-                  (self.wordlist, self.hashpath))
+        subprocess.call("john --wordlist=%s --encoding=UTF-8 %s" %
+                        (self.wordlist, self.hashpath), shell=True)
 
     def show_result(self):
         super(JTR, self).show_result()

@@ -119,6 +119,8 @@ def domain(args):
         else:
             print('currently only support "MacOS"!')
         return
+    args.wordlist = os.path.abspath(args.wordlist)
+    args.file = os.path.abspath(args.file)
     if args.engine == Engine.hashcat:
         # use hashcat
         attacker = attackers.Hashcat('7z', args.wordlist, args.file, HASH_PATH)
