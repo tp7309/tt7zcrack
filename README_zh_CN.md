@@ -2,7 +2,7 @@
 
 [![build](https://github.com/tp7309/tt7zcrack/actions/workflows/build.yaml/badge.svg)](https://github.com/tp7309/tt7zcrack/actions/workflows/build.yaml)
 [![codecov](https://codecov.io/gh/tp7309/tt7zcrack/branch/master/graph/badge.svg?token=lyEWTqfeb9)](https://codecov.io/gh/tp7309/tt7zcrack)
-[![DeepSource](https://deepsource.io/gh/tp7309/tt7zcrack.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/tp7309/tt7zcrack/?ref=repository-badge)
+<!-- [![DeepSource](https://deepsource.io/gh/tp7309/tt7zcrack.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/tp7309/tt7zcrack/?ref=repository-badge) -->
 
 首先 tt7zcrack 是一个支持 GPU/CPU 加速的 7z 破解工具，速度比用`7z`解压命令一个个试验要快很多。写这个小工具的原因是作者君的一个 7z 压缩包密码忘了，在破解过程中遇到了不少坑，现有的工具有一定的学习成本，所以把这些结果输出供有碰到相同问题的同学使用。
 
