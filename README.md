@@ -1,6 +1,6 @@
 # tt7zcrack
 
-[![Build Status](https://travis-ci.com/tp7309/tt7zcrack.svg?branch=master)](https://travis-ci.com/tp7309/tt7zcrack)
+[![build](https://github.com/tp7309/tt7zcrack/actions/workflows/build.yaml/badge.svg)](https://github.com/tp7309/tt7zcrack/actions/workflows/build.yaml)
 [![codecov](https://codecov.io/gh/tp7309/tt7zcrack/branch/master/graph/badge.svg?token=lyEWTqfeb9)](https://codecov.io/gh/tp7309/tt7zcrack)
 [![DeepSource](https://deepsource.io/gh/tp7309/tt7zcrack.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/tp7309/tt7zcrack/?ref=repository-badge)
 

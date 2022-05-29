@@ -63,8 +63,12 @@ def install_osx(force_china):
     # 7z2john.pl dependencies
     print("------we need sudo to install perl script dependencies------")
     run("curl -L https://cpanmin.us | perl - App::cpanminus --sudo && sudo cpanm Compress::Raw::Lzma")
+
+    # fix Github Actions build error
     run("sudo cpan Compress::Raw::Lzma")
     run("sudo cpan IO::Compress::Lzma")
+    run("mkdir -p ~/.local/share/hashcat/sessions")
+
     if not isinstalled():
         print('\n\ninstall failed!')
     else:
