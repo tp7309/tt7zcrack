@@ -27,7 +27,7 @@ pip install tt7zcrack
 
 Make sure [brew](https://brew.sh/index_zh-cn) is installed.
 
-Create **pwds.txt** to store possible passwords, one password occupies one line. you can also use [TTPassGen](https://github.com/tp7309/TTPassGen) to generate a large amount of passwords.
+Create **pwds.txt**([example](https://github.com/tp7309/tt7zcrack/blob/master/asserts/crackme_wordlist.txt)) to store possible passwords, one password occupies one line. you can also use [TTPassGen](https://github.com/tp7309/TTPassGen) to generate a large amount of passwords.
 
 ```bash
 # use passwords from pwds.txt to crack file
