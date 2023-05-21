@@ -4,7 +4,7 @@
 [![codecov](https://codecov.io/gh/tp7309/tt7zcrack/branch/master/graph/badge.svg?token=lyEWTqfeb9)](https://codecov.io/gh/tp7309/tt7zcrack)
 <!-- [![DeepSource](https://deepsource.io/gh/tp7309/tt7zcrack.svg/?label=active+issues&show_trend=true)](https://deepsource.io/gh/tp7309/tt7zcrack/?ref=repository-badge) -->
 
-首先 tt7zcrack 是一个支持 GPU/CPU 加速的 7z 破解工具，速度比用`7z`解压命令一个个试验要快很多。写这个小工具的原因是作者君的一个 7z 压缩包密码忘了，在破解过程中遇到了不少坑，现有的工具有一定的学习成本，所以把这些结果输出供有碰到相同问题的同学使用。
+首先 tt7zcrack 是一个支持 GPU/CPU 加速的 7z 破解工具，速度比用`7z`解压命令一个个试验要快很多。写这个小工具的原因是作者君的一个 7z 压缩包密码忘了，在破解过程中遇到了不少坑，现有的工具有一定的学习成本，所以把破解结果输出,供有碰到相同问题的同学使用。
 
 # 使用要求
 
@@ -38,7 +38,7 @@ tt7zcrack --wordlist pwds.txt crack.7z
 
 暂不支持。
 
-# 详情使用
+# 使用说明
 
 ```bash
 tt7zcrack --help
@@ -52,7 +52,7 @@ positional arguments:
 optional arguments:
   -h, --help            显示帮助
   --wordlist [WORDLIST]
-                        供猜解的密码列表，可以手动写，也可以使用`tt7zcrack`来生成，编译最好是"utf-8"
+                        供猜解的密码列表，可以手动写，也可以使用`TTPassGen`来生成，最好采用"utf-8"编码。
                         (default: '')
   --engine {hashcat,jtr}
                         密码破解工具(default: hashcat)
